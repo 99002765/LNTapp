@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">LNTapp</string>
+    <string name="ent_nm">Name</string>
+    <string name="ent_pwd">Password</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+</resources>
