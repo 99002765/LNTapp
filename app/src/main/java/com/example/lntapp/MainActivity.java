@@ -2,6 +2,7 @@ package com.example.lntapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -31,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
         String pass=pwd.getText().toString();
         if(uname.equals("Sandeep") && pass.equals("123456")){
             Toast.makeText(this, "Login Successful", Toast.LENGTH_SHORT).show();
+            Intent hIntent= new Intent(MainActivity.this, HomeActivity.class);
+            hIntent.putExtra("userName",uname);
+            startActivity(hIntent);
         }
         else{
             Toast.makeText(this, "Login Unsuccessful", Toast.LENGTH_SHORT).show();
