@@ -3,6 +3,7 @@ package com.example.lntapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.nfc.Tag;
 import android.os.Bundle;
 import android.util.Log;
@@ -55,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
         TextView welcomeTextView;
         welcomeTextView=findViewById(R.id.textViewWelcome);
         welcomeTextView.setText("Welcome to L&T");
+        Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("tel:1234567890"));
+        startActivity(intent);
     }
     public void loginClick(View view) {
         EditText userName,pwd;
