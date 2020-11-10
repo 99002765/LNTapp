@@ -16,9 +16,11 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         Intent intent = getIntent();
         Bundle extras = intent.getExtras();
-        String data = extras.getString("userName");
-        TextView view = findViewById(R.id.showUserName);
-        view.setText("Hello, "+data);
+        if(extras!=null) {
+            String data = extras.getString("userName");
+            TextView view = findViewById(R.id.showUserName);
+            view.setText("Hello, " + data);
+        }
     }
     @Override
     protected void onStart() {
