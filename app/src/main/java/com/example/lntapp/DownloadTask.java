@@ -20,7 +20,14 @@ public class DownloadTask extends AsyncTask<String,Integer,Void> {//input type,p
     @Override
     protected Void doInBackground(String... strings) {
         Log.i(TAG, strings[0]);
-        publishProgress(50);
+        for(int i=1;i<=200;i++){
+            try {
+                Thread.sleep(5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+            publishProgress(i/2);
+        }
         return null;
     }
 
