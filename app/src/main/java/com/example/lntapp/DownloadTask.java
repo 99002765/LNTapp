@@ -2,6 +2,7 @@ package com.example.lntapp;
 
 import android.os.AsyncTask;
 import android.util.Log;
+import android.view.View;
 import android.widget.ProgressBar;
 
 public class DownloadTask extends AsyncTask<String,Integer,Void> {//input type,progress type,result type
@@ -10,6 +11,12 @@ public class DownloadTask extends AsyncTask<String,Integer,Void> {//input type,p
     ProgressBar mProgressBar;
     public DownloadTask(ProgressBar progressBar) {
         mProgressBar= progressBar;
+    }
+
+    @Override
+    protected void onPreExecute() {
+        super.onPreExecute();
+        mProgressBar.setVisibility(View.VISIBLE);
     }
 
     /**
@@ -35,5 +42,11 @@ public class DownloadTask extends AsyncTask<String,Integer,Void> {//input type,p
     protected void onProgressUpdate(Integer... values) {
         super.onProgressUpdate(values);
         mProgressBar.setProgress(values[0]);
+    }
+
+    @Override
+    protected void onPostExecute(Void aVoid) {
+        super.onPostExecute(aVoid);
+        mProgressBar.setVisibility(View.INVISIBLE);
     }
 }
