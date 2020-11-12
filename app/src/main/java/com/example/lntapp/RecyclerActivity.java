@@ -15,10 +15,10 @@ public class RecyclerActivity extends AppCompatActivity {
         setContentView(R.layout.activity_recycler);
         languages=new String[]{"Hindi","Telugu","Tamil","Malayalam"};
         RecyclerView recyclerView= findViewById(R.id.recyclerView);
-        MyAdapter adapter = new MyAdapter(this,languages);
-        StaggeredGridLayoutManager staggeredGridLayoutManager= new StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL);
-        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setLayoutManager(staggeredGridLayoutManager);
-        recyclerView.setAdapter(adapter);
+//        MyAdapter adapter = new MyAdapter(this,languages);
+//        StaggeredGridLayoutManager staggeredGridLayoutManager= new StaggeredGridLayoutManager(2,LinearLayoutManager.VERTICAL);
+//        //recyclerView.setLayoutManager(new LinearLayoutManager(this));
+//        recyclerView.setLayoutManager(staggeredGridLayoutManager);
+//        recyclerView.setAdapter(adapter);
     }
 }
